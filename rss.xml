@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>liticia shop</title>
+        <link>https://liticiashop.netlify.app/</link>
+        <description>   أفضل متجر للتسوق الإلكتروني للأزياء والملابس العصرية. تسوق الآن للحصول على أفضل العروض! </description>
+        <language>ar</language>
+        <pubDate>Sun, 16 Sep 2024 00:00:00 +0000</pubDate>
+        <lastBuildDate>Sun, 16 Sep 2024 00:00:00 +0000</lastBuildDate>
+        
+        <item>
+            <title> روب تونسي</title>
+            <link>https://liticiashop.netlify.app/order.html?productId=4</link>
+            <description>متجر للتسوق الإلكتروني للأزياء والملابس العصرية</description>
+            <pubDate>Sun, 16 Sep 2024 00:00:00 +0000</pubDate>
+            <guid>https://liticiashop.netlify.app/order.html?productId=4</guid>
+        </item>
+
+        <!-- أضف المزيد من العناصر بنفس الشكل -->
+
+    </channel>
+</rss>

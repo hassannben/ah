@@ -1,0 +1,170 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "attributes": {
+                "Title": " غوب تونسي",
+                "Description": "لكل افراحكم واعراسكم متجر لتيشيا شوب يوفر لكم احدث الموديلات غوب تونسي الموديل اللي دار حاله هذا الصيف قماش شاطئ ايطالي وكراب متوفر بالوان مختاره بعنايه الاحمر الازرق الاخضر البنفسجي البرتقالي لطلب يرجى ملء الاستماره وسنتصل بكم لاحقا لتاكيد الطلبيه",
+                "Price": "6800",
+                "Size": "M L XL XXL", 
+                "Color": "rouge vert move bleu " , 
+                "Image": {
+                    "data": [
+                        {
+                            "attributes": {
+                                "formats": {
+                                    "thumbnail": {
+                                        "url": "images/p4.jpg" 
+                                    }
+                                }
+                            }
+                        },
+                        
+                        {
+                            "attributes": {
+                                "formats": {
+                                    "thumbnail": {
+                                        "url": "images/p3.jpg"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "attributes": {
+                                "formats": {
+                                    "thumbnail": {
+                                        "url": "images/p1.jpg"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "attributes": {
+                                "formats": {
+                                    "thumbnail": {
+                                        "url": "images/p.jpg"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "attributes": {
+                                "formats": {
+                                    "thumbnail": {
+                                        "url": "images/p6.jpg"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "attributes": {
+                                "formats": {
+                                    "thumbnail": {
+                                        "url": "images/pp2.jpg"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "attributes": {
+                                "formats": {
+                                    "thumbnail": {
+                                        "url": "images/p5.jpg"
+                                    }
+                                }
+                            }
+                        }
+                       
+                    
+                        
+                    ]
+                }
+            }
+        },
+        {
+            "id": "2",
+            "attributes": {
+                "Title": " غوب تونسي",
+                "Description": "لكل افراحكم واعراسكم متجر لتيشيا شوب يوفر لكم احدث الموديلات غوب تونسي الموديل اللي دار حاله هذا الصيف قماش شاطئ ايطالي وكراب متوفر بالوان مختاره بعنايه الاحمر الازرق الاخضر البنفسجي البرتقالي لطلب يرجى ملء الاستماره وسنتصل بكم لاحقا لتاكيد الطلبيه",
+                "Price": "6800",
+                "Size": "M L XL XXL", 
+                "Color": "rouge vert move bleu " , 
+                "Image": {
+                    "data": [
+                        {
+                            "attributes": {
+                                "formats": {
+                                    "thumbnail": {
+                                        "url": "images/ph6.jpg" 
+                                    }
+                                }
+                            }
+                        },
+                        
+                        {
+                            "attributes": {
+                                "formats": {
+                                    "thumbnail": {
+                                        "url": "images/ph1.jpg"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "attributes": {
+                                "formats": {
+                                    "thumbnail": {
+                                        "url": "images/ph2.jpg"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "attributes": {
+                                "formats": {
+                                    "thumbnail": {
+                                        "url": "images/ph3.jpg"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "attributes": {
+                                "formats": {
+                                    "thumbnail": {
+                                        "url": "images/ph4.jpg"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "attributes": {
+                                "formats": {
+                                    "thumbnail": {
+                                        "url": "images/ph5.jpg"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "attributes": {
+                                "formats": {
+                                    "thumbnail": {
+                                        "url": "images/ph.jpg"
+                                    }
+                                }
+                            }
+                        }
+                       
+                    
+                        
+                    ]
+                }
+            }
+        }
+  
+       
+          
+        
+    ]
+}

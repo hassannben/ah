@@ -1,0 +1,957 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2072c5;
+    --secondary-color: #4CAF50;
+    --accent-color: #e74c3c;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    /* لون نص داكن لتباين جيد */
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* التأكد من أن الجسم يكون على الأقل بارتفاع الشاشة */
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    overflow-x: hidden;
+    animation: fadeIn 1s ease-in-out;
+    box-sizing: border-box;
+
+
+
+
+
+    height: 100vh;
+    /* عرض الصفحة بالكامل */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+    /* خط عنوان عصري */
+}
+
+#product-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#product-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 15px;
+    text-align: justify;
+    padding: 0 15px;
+}
+
+#product-price {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #e74c3c;
+    display: block;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.prod {
+    font-family: 'Arial', sans-serif;
+    font-size: 48px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, rgba(255, 0, 150, 0.8), rgba(0, 204, 255, 0.8));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-in-out;
+    margin: 0;
+    /* إزالة الهوامش لتوسيط العنوان بالكامل */
+}
+
+/* تأثير دخول النص */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تنسيق العنوان الرئيسي */
+.brand-title {
+    font-family: 'Arial', sans-serif;
+    /* استخدام خط عصري */
+    font-size: 48px;
+    /* حجم الخط */
+    color: var(--primary-color);
+    /* لون الخط الرئيسي باستخدام متغيرات الألوان */
+    text-transform: uppercase;
+    /* تحويل النص إلى أحرف كبيرة */
+    letter-spacing: 2px;
+    /* زيادة المسافة بين الحروف */
+    text-align: center;
+    /* توسيط النص */
+    background: linear-gradient(90deg, rgba(255, 0, 150, 0.8), rgba(0, 204, 255, 0.8));
+    /* إضافة تأثير تدرج لوني للخلفية */
+    background-clip: text;
+    /* قص الخلفية ليظهر التدرج داخل النص */
+    -webkit-background-clip: text;
+    /* دعم الخلفية في WebKit */
+    color: transparent;
+    /* جعل النص شفافاً لإظهار الخلفية */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    /* إضافة ظل للنص */
+    margin-top: 20px;
+    /* إضافة مسافة من الأعلى */
+    margin-bottom: 20px;
+    /* إضافة مسافة من الأسفل */
+    animation: fadeIn 2s ease-in-out;
+    /* تأثير دخول النص بشكل سلس */
+}
+
+/* تأثير دخول النص */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+
+header {
+    margin-top: 0;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    /* تدرج لوني ناعم */
+
+    /* إضافة مساحة داخلية مناسبة */
+    display: flex;
+    flex-direction: row;
+    /* تغيير الاتجاه إلى صف */
+    justify-content: space-between;
+    /* توزيع المساحة بين العناصر */
+    align-items: center;
+    /* محاذاة العناصر عموديًا */
+    border-bottom: 1px solid #ddd;
+    /* خط سفلي خفيف */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* إضافة ظل خفيف */
+    position: relative;
+    z-index: 10;
+    /* التأكد من ظهور الرأس فوق العناصر الأخرى */
+    border-radius: 8px;
+    /* إضافة زوايا دائرية لتنعيم الحواف */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    /* تأثيرات انتقال سلسة */
+}
+
+header:hover {
+    background: linear-gradient(to right, #e9ecef, #f8f9fa);
+    /* تغيير التدرج عند التمرير */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    /* تعزيز تأثير الظل عند التمرير */
+}
+
+/* تحسينات العنوان */
+header h1 {
+    font-size: 2.5rem;
+    /* حجم خط كبير وعصري */
+    margin: 0;
+    color: #333;
+    /* لون نص داكن */
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    /* خط عصري */
+    letter-spacing: 1px;
+    /* تحسين التباعد بين الحروف */
+    flex: 1;
+    /* السماح للعناصر الأخرى بالتمدد */
+}
+
+/* تحسينات حاوية البحث */
+.search-container {
+    display: flex;
+    align-items: center;
+    /* محاذاة العناصر عموديًا */
+    gap: 12px;
+    /* المسافة بين العناصر */
+}
+
+/* تحسينات زر البحث */
+#search-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    /* حجم مناسب للأيقونة */
+    color: #007bff;
+    /* لون الأيقونة */
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* تأثيرات انتقال سلسة */
+}
+
+#search-icon:hover {
+    color: #0056b3;
+    /* تغيير لون الأيقونة عند التمرير */
+    transform: scale(1.1);
+    /* تكبير الأيقونة عند التمرير */
+}
+
+/* تحسينات حقل الإدخال */
+#search-input {
+    padding: 12px 15px;
+    /* إضافة مساحة داخلية مريحة */
+    border: 1px solid #ced4da;
+    /* حدود خفيفة */
+    border-radius: 8px;
+    /* زوايا دائرية مريحة */
+    width: 0;
+    /* عرض صفر لإخفاء الحقل بشكل افتراضي */
+    font-size: 1rem;
+    /* حجم خط مناسب */
+    transition: width 0.3s ease, opacity 0.3s ease;
+    /* تأثيرات انتقال سلسة */
+    opacity: 0;
+    /* إخفاء الحقل بشكل افتراضي */
+}
+
+#search-input.visible {
+    width: 240px;
+    /* عرض ثابت عند العرض */
+    opacity: 1;
+    /* إظهار الحقل */
+}
+
+#search-input:focus {
+    border-color: #007bff;
+    /* تغيير لون الحدود عند التركيز */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+    /* إضافة ظل خفيف عند التركيز */
+    outline: none;
+    /* إزالة الإطار الافتراضي */
+}
+
+
+
+
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* الحاوية الرئيسية */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+}
+
+/* تحسين تصميم الصورة الرئيسية */
+.main-image-container {
+    width: 100%;
+    max-width: 100%;
+    /* التأكد من أن الصورة تتناسب مع عرض الشاشة */
+    margin-bottom: 20px;
+    position: relative;
+    padding: 0 15px;
+    /* إضافة حشوة صغيرة لتجنب الاقتراب من الحواف */
+}
+
+#main-image {
+    width: 350px;
+    border-radius: 20px;
+    /* تحسين الزوايا لتكون أكثر نعومة */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    /* تحسين تأثير الظل لجعل الصورة تبرز أكثر */
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+    /* تحسين تأثيرات الانتقال */
+    object-fit: cover;
+}
+
+#main-image:hover {
+    transform: scale(1.05);
+    /* زيادة تأثير التكبير عند التمرير */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    /* تحسين الظل عند التمرير */
+    filter: brightness(1.1) contrast(1.1);
+    /* تحسين التباين مع السطوع */
+}
+
+.main-image-container::after {
+    content: '';
+    /* محتوى فارغ لتطبيق تأثير التراكب */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    /* تراكب شبه شفاف لتحسين وضوح الصورة */
+    border-radius: 20px;
+    /* توافق مع تدوير الزوايا */
+    transition: opacity 0.4s ease;
+    /* تحسين تأثير التلاشي */
+    opacity: 0;
+}
+
+.main-image-container:hover::after {
+    opacity: 1;
+    /* إظهار التراكب عند التمرير */
+}
+
+/* تحسين تصميم معرض الصور المصغرة ليتناسب مع الشاشات الصغيرة */
+.thumbnail-gallery {
+    display: flex;
+    flex-direction: row;
+    /* تغيير اتجاه العناصر لتناسب الشاشات الصغيرة */
+    flex-wrap: wrap;
+    /* السماح بتعديل الترتيب عند الحاجة */
+    justify-content: center;
+    gap: 10px;
+    /* تقليل المسافة بين الصور */
+    margin-top: 20px;
+}
+
+.thumbnail {
+    width: 100px;
+    /* عرض الصورة الصغيرة */
+    height: 70px;
+    /* ارتفاع الصورة الصغيرة */
+    object-fit: cover;
+    /* ضمان أن الصورة تملأ الإطار بدون تغيير نسبة العرض إلى الارتفاع */
+    margin: 5px;
+    /* مسافة بين الصور */
+    cursor: pointer;
+    /* يشير إلى أن الصورة قابلة للنقر */
+}
+
+
+/* تأثير التمرير على الصور المصغرة */
+.thumbnail:hover {
+    transform: scale(1.1);
+    /* تكبير الصورة قليلاً عند التمرير */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    /* تحسين الظل عند التمرير */
+    border-color: var(--accent-color);
+    /* تغيير لون الحدود عند التمرير */
+}
+
+/* تأثير النقر على الصور المصغرة */
+.thumbnail:active {
+    transform: scale(0.95);
+    /* تقليل حجم الصورة قليلاً عند النقر */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    /* تقليل الظل عند النقر */
+    border-color: var(--accent-color-light);
+    /* تغيير لون الحدود بشكل أخف عند النقر */
+}
+
+.order-form-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.order-form-container h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+/* أضف هذا إلى ملف styles.css */
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.form-group>div {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.form-group h4 {
+    margin-bottom: 5px;
+}
+
+/* التحقق من أن العناصر الأخرى لا تتداخل مع العناصر الموجودة في النموذج */
+#order-form-container {
+    margin-top: 20px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+/* تحسين لتنسيق العناصر الصغيرة */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding: 15px;
+    height: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.data-image {
+    width: 100%;
+
+    overflow: hidden;
+}
+
+.data-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* تحسين تصميم المعرض */
+.image-gallery {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.prod {
+    font-size: 36px;
+    /* حجم النص */
+    font-weight: bold;
+    /* جعل النص عريضًا */
+    color: var(--primary-color);
+    /* استخدام اللون الرئيسي الخاص بموقعك */
+    margin: 20px 0;
+    /* إضافة تباعد أعلى وأسفل العنوان */
+    position: relative;
+    display: inline-block;
+    /* جعل العنصر بحجم النص فقط */
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent;
+    /* إضافة خط تحت النص ليظهر عند التمرير */
+    transition: color 0.3s ease, border-color 0.3s ease;
+    /* تأثير الانتقال */
+}
+
+
+.prod:hover {
+    color: var(--secondary-color);
+    /* تغيير لون النص عند التمرير */
+    border-bottom-color: var(--secondary-color);
+    /* إظهار الخط السفلي عند التمرير */
+}
+
+.prod::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: var(--secondary-color);
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.prod:hover::before {
+    transform: scaleX(1);
+}
+
+
+.search-container {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+#search-input {
+    width: 100%;
+    max-width: 80px;
+    padding: 10px;
+}
+
+button {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.footer-content {
+    padding: 15px;
+}
+
+.footer-nav ul {
+    text-align: center;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.footer-nav ul li {
+    display: block;
+    margin: 5px 0;
+}
+
+.footer-social a {
+    font-size: 16px;
+    margin: 0 8px;
+}
+
+@media (max-width: 480px) {
+    .main-image-container {
+        padding: 0 10px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        /* تحسين حجم الأعمدة على الشاشات الأصغر جداً */
+    }
+
+    .product-card {
+        padding: 10px;
+        /* تقليل البادينغ على الشاشات الأصغر */
+    }
+
+    .order-btn {
+        padding: 10px 15px;
+        /* تقليل حجم الزر على الشاشات الأصغر */
+    }
+
+    header {
+        padding: 10px 15px;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    header nav a {
+        margin: 5px 0;
+    }
+
+    .thumbnail-gallery {
+        gap: 8px;
+    }
+
+    .thumbnail {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+footer {
+    background-color: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    margin-top: auto;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    /* إضافة ظل خفيف للتذييل */
+    border-top: 1px solid #ddd;
+    /* إضافة خط علوي خفيف */
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.footer-nav ul li {
+    display: inline-block;
+    /* تعديل العرض ليكون كتلة صغيرة */
+    margin: 0 10px;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    /* تأثير تغيير اللون عند التمرير */
+}
+
+.footer-nav ul li a:hover {
+    color: #f0f0f0;
+    /* تغيير اللون عند التمرير */
+}
+
+.footer-social {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* تأثيرات التغيير عند التمرير */
+}
+
+.footer-social a:hover {
+    color: #f0f0f0;
+    /* تغيير اللون عند التمرير */
+    transform: scale(1.1);
+    /* تكبير الأيقونات عند التمرير */
+}
+
+
+
+
+/* تصميم المعرض المصغر */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* تحسين حجم الأعمدة */
+    gap: 20px;
+    /* زيادة الفجوة بين العناصر */
+    padding: 10px;
+    background-color: #f8f9fa;
+    /* لون خلفية خفيف */
+    grid-auto-rows: auto;
+    /* تحسين توزيع الصفوف */
+}
+
+/* تحسينات البطاقة */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    /* لون حدود أكثر نعومة */
+    border-radius: 12px;
+    /* تحسين الزوايا */
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* تحسين تأثير الظل */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    /* تحسين تأثيرات الانتقال */
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    height: auto;
+    box-sizing: border-box;
+    position: relative;
+    /* لضمان تأثيرات التراكب */
+}
+
+/* تأثيرات الصورة */
+.product-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    /* تحسين زوايا الصورة */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    /* تحسين تأثيرات الانتقال */
+}
+
+/* تأثير التكبير وتقليل السطوع عند التمرير */
+.product-card img:hover {
+    transform: scale(1.05);
+    /* تأثير التكبير عند التمرير */
+    filter: brightness(0.9);
+    /* تقليل السطوع عند التمرير */
+}
+
+/* تحسين النصوص داخل البطاقة */
+.product-card h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin: 10px 0 5px;
+    transition: color 0.3s ease;
+    /* تحسين تأثير تغيير اللون */
+}
+
+.product-card p {
+    font-size: 0.875rem;
+    color: #666;
+    margin: 0 0 10px;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+    /* تحسين تأثير تغيير اللون */
+}
+
+/* تغيير لون العنوان والنصوص عند التمرير */
+.product-card:hover h3 {
+    color: #007bff;
+    /* تغيير لون العنوان عند التمرير */
+}
+
+.product-card:hover p {
+    color: #555;
+    /* تغيير لون النص عند التمرير */
+}
+
+/* تحسين الزر */
+.order-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    /* زيادة سمك الخط */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* إضافة ظل للزر */
+}
+
+/* تحسين تأثيرات الزر عند التمرير */
+.order-btn:hover {
+    background-color: #0056b3;
+    color: #e2e2e2;
+    transform: scale(1.05);
+    /* تكبير الزر قليلاً عند التمرير */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    /* تحسين الظل عند التمرير */
+}
+
+#product-size,
+#product-color {
+    margin: 20px 0;
+}
+
+#product-size label,
+#product-color label {
+    margin-left: 10px;
+}
+
+#product-size input,
+#product-color input {
+    margin-right: 5px;
+}
+
+#product-size h4,
+#product-color h4 {
+    margin-bottom: 10px;
+}
+
+.image-thumbnail-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.thumbnail {
+    width: 100px;
+    /* يمكنك ضبط العرض حسب الحاجة */
+    height: auto;
+    margin-right: 10px;
+}
+
+.image-color-label {
+    font-size: 14px;
+    color: #333;
+}
+
+/* تحسين التخطيط لشاشات العرض الصغيرة */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #product-title {
+        font-size: 1.5rem;
+    }
+
+    #product-description {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    #product-price {
+        font-size: 1.4rem;
+    }
+
+    .order-form-container {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .thumbnail-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .thumbnail {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        margin: 5px;
+    }
+
+    header {
+        padding: 15px 20px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    header nav {
+        margin-top: 5px;
+    }
+
+    header nav a {
+        font-size: 14px;
+        margin: 0 10px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        /* تحسين حجم الأعمدة على الشاشات الأصغر */
+    }
+
+    .prod {
+        font-size: 24px;
+        /* تقليل الحجم أكثر على الشاشات الأصغر */
+    }
+
+    .product-card h3 {
+        font-size: 1.1rem;
+        /* تقليل حجم العنوان على الشاشات الصغيرة */
+    }
+
+    .product-card p {
+        font-size: 0.75rem;
+        /* تقليل حجم النصوص على الشاشات الصغيرة */
+    }
+}

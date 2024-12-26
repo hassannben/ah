@@ -1,0 +1,7 @@
+# ملف robots.txt لموقع Lili robe
+User-agent: Mediapartners-Google
+User-agent: *
+Disallow: /search
+Allow: /
+Sitemap:https://liticiashop.netlify.app/sitemap.xml/atom.xml?redirect=false&start-index=1&max-results=500
+

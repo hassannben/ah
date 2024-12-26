@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Page</title>
+        
+        <!-- Open Graph Tags -->
+        <meta property="og:title" content="" id="og-product-title">
+        <meta property="og:description" content="" id="og-product-description">
+        <meta property="og:image" content="" id="og-main-image">
+        <meta property="og:url" content="https://liticiashop.netlify.app" id="og-url">
+        
+        <!-- Twitter Card Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="" id="twitter-product-title">
+        <meta name="twitter:description" content="" id="twitter-product-description">
+        <meta name="twitter:image" content="" id="twitter-main-image">
+        <script src="https://cdn.jsdelivr.net/npm/qrcodejs2@0.0.0/qrcode.min.js"></script>
+
+        <link rel="stylesheet" href="styles.css">
+
+<body>
+    <header>
+        <a href="index.html">
+            <h1 class="brand-title">Liticia shop</h1>
+        </a>
+        <div class="search-container">
+            <button id="search-icon">&#128269;</button>
+            <input type="text" id="search-input" placeholder="بحث...">
+        </div>
+    </header>
+    <div class="main-container">
+        <section id="product-details" class="product-details-container">
+            <div>
+                <img id="main-image" src="" alt="صورة المنتج الرئيسية">
+                <div id="thumbnail-gallery" class="thumbnail-gallery"></div>
+                <h3 id="product-title">اسم المنتج</h3>
+                <p id="product-description">وصف المنتج</p>
+                <span id="product-price">السعر</span>
+            </div>
+        </section>
+        <section id="order-form-section" class="order-form-container">
+            <h2>نموذج الطلب</h2>
+            <form id="order-form"
+                action="https://script.google.com/macros/s/AKfycbwPsqab-9McLDl4_YgMF3Eu8_wai942Eh7Qo_kqyaOdJasnu1bP4xlmmamV4XuYTQhU/exec"
+                method="POST" onsubmit="submitOrder(event)">
+                <input type="hidden" id="product-id" name="product-id" value="12345">
+                <div class="form-group">
+                    <div>
+                        <input type="text" id="name" name="name" placeholder="الاسم و اللقب" required>
+                    </div>
+                    <div>
+                        <input type="tel" id="phone" name="phone" placeholder="رقم الهاتف" required
+                            style="direction: rtl; text-align: right;" maxlength="10" pattern="\d{10}"
+                            title="يرجى إدخال 10 أرقام فقط">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>
+                        <label for="wilaya"> </label>
+                        <select id="wilaya" name="wilaya" required onchange="showCommunes()">
+                      
+                            <option value="أدرار">أدرار</option>
+                            <option value="الشلف">الشلف</option>
+                            <option value="الأغواط">الأغواط</option>
+                            <option value="أم البواقي">أم البواقي</option>
+                            <option value="باتنة">باتنة</option>
+                            <option value="بجاية">بجاية</option>
+                            <option value="بسكرة">بسكرة</option>
+                            <option value="بشار">بشار</option>
+                            <option value="البليدة">البليدة</option>
+                            <option value="البويرة">البويرة</option>
+                            <option value="تمنراست">تمنراست</option>
+                            <option value="تبسة">تبسة</option>
+                            <option value="تلمسان">تلمسان</option>
+                            <option value="تيارت">تيارت</option>
+                            <option value="تيزي وزو">تيزي وزو</option>
+                            <option value="الجزائر">الجزائر</option>
+                            <option value="الجلفة">الجلفة</option>
+                            <option value="جيجل">جيجل</option>
+                            <option value="سطيف">سطيف</option>
+                            <option value="سعيدة">سعيدة</option>
+                            <option value="سكيكدة">سكيكدة</option>
+                            <option value="سيدي بلعباس">سيدي بلعباس</option>
+                            <option value="عنابة">عنابة</option>
+                            <option value="قالمة">قالمة</option>
+                            <option value="قسنطينة">قسنطينة</option>
+                            <option value="المدية">المدية</option>
+                            <option value="مستغانم">مستغانم</option>
+                            <option value="المسيلة">المسيلة</option>
+                            <option value="معسكر">معسكر</option>
+                            <option value="ورقلة">ورقلة</option>
+                            <option value="وهران">وهران</option>
+                            <option value="البيض">البيض</option>
+                            <option value="إليزي">إليزي</option>
+                            <option value="برج بوعريريج">برج بوعريريج</option>
+                            <option value="بومرداس">بومرداس</option>
+                            <option value="الطارف">الطارف</option>
+                            <option value="تندوف">تندوف</option>
+                            <option value="تيسمسيلت">تيسمسيلت</option>
+                            <option value="الوادي">الوادي</option>
+                            <option value="خنشلة">خنشلة</option>
+                            <option value="سوق أهراس">سوق أهراس</option>
+                            <option value="تيبازة">تيبازة</option>
+                            <option value="ميلة">ميلة</option>
+                            <option value="عين الدفلى">عين الدفلى</option>
+                            <option value="النعامة">النعامة</option>
+                            <option value="عين تموشنت">عين تموشنت</option>
+                            <option value="غرداية">غرداية</option>
+                            <option value="غليزان">غليزان</option>
+                            <option value="تيميمون">تيميمون</option>
+                            <option value="برج باجي مختار">برج باجي مختار</option>
+                            <option value="أولاد جلال">أولاد جلال</option>
+                            <option value="بني عباس">بني عباس</option>
+                            <option value="عين صالح">عين صالح</option>
+                            <option value="عين قزام">عين قزام</option>
+                            <option value="تقرت">تقرت</option>
+                            <option value="جانت">جانت</option>
+                            <option value="المغير">المغير</option>
+                            <option value="المنيعة">المنيعة</option>
+                        </select>
+                        
+                        
+                    </div>
+                    <div>
+                        <label id="commune" for="commune"> </label>
+                        <select id="address" name="address" required>
+                            <option value="" disabled selected>اختر البلدية</option>
+                            <!-- سيتم ملء البلديات هنا بناءً على الولاية المختارة -->
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>
+                        <h4>  الكمية</h4>
+                        <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>
+                        <h4>اختر المقاس</h4>
+                        <select id="size" name="size" required>
+                            <option value="" disabled selected>اختر المقاس</option>
+                            <!-- سيتم ملء خيارات المقاس ديناميكيًا هنا -->
+                        </select>
+                    </div>
+                    <div>
+                        <h4>اختر اللون</h4>
+                        <select id="color" name="color" required>
+                            <option value="" disabled selected>اختر اللون</option>
+                            <!-- سيتم ملء خيارات اللون ديناميكيًا هنا -->
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group delivery-cost-total">
+                    <div>
+                        <h4>تكلفة التوصيل</h4>
+                        <input type="text" id="deliveryCost" name="deliveryCost" placeholder="تكلفة التوصيل" readonly>
+                    </div>
+                    <div>
+                        <h4>السعر الإجمالي</h4>
+                        <input type="text" id="total" name="total" placeholder="المجموع">
+                    </div>
+                </div>
+                
+               
+               
+                <input type="submit" value="تأكيد الطلب">
+                <div id="loading-message" style="display:none;">جاري تقديم الطلب...</div>
+
+            </form>
+        </section>
+    </div>
+    <h1 class="prod">منتجات أخرى</h1>
+    <section id="data-container" class="products-grid">
+        <!-- سيتم عرض المنتجات هنا بواسطة JavaScript -->
+    </section>
+    <footer class="footer-content">
+        <p>&copy; 2024 متجر إلكتروني. جميع الحقوق محفوظة.</p>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="about.html">عن المتجر</a></li>
+                <li><a href="contactus.html">اتصل بنا</a></li>
+                <li><a href="privacy.html">سياسة الخصوصية</a></li>
+            </ul>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            </div>
+        </nav>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+       
+
+        function submitOrder(event) {
+            const phoneInput = document.getElementById('phone');
+            const phoneValue = phoneInput.value;
+        
+            // التحقق من أن رقم الهاتف يحتوي على 10 أرقام فقط
+            if (!/^\d{10}$/.test(phoneValue)) {
+                event.preventDefault(); // منع إرسال النموذج
+                alert('يرجى التأكد من الرقم');
+                phoneInput.focus(); // تركيز الإدخال على الحقل
+                return false; // منع إرسال النموذج
+            }
+            return true; // السماح بإرسال النموذج إذا كان الرقم صحيحاً
+        }
+      
+      document.addEventListener('DOMContentLoaded', function() {
+        // Replace these variables with the actual product data you fetch
+        const productTitle = "Your Product Title";
+        const productDescription = "Your Product Description";
+        const productImage = "https://example.com/path-to-your-product-image.jpg";
+        const productUrl = "https://robelili.netlify.app/product-page";
+
+        // Update Open Graph meta tags
+        document.getElementById('og-product-title').setAttribute('content', productTitle);
+        document.getElementById('og-product-description').setAttribute('content', productDescription);
+        document.getElementById('og-main-image').setAttribute('content', productImage);
+        document.getElementById('og-url').setAttribute('content', productUrl);
+
+        // Update Twitter Card meta tags
+        document.getElementById('twitter-product-title').setAttribute('content', productTitle);
+        document.getElementById('twitter-product-description').setAttribute('content', productDescription);
+        document.getElementById('twitter-main-image').setAttribute('content', productImage);
+      });
+ 
+    </script>
+</body>
+</html>

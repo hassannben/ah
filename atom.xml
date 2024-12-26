@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title> liticia shoop</title>
+    <subtitle> Liticia shoop - أفضل متجر للتسوق الإلكتروني للأزياء والملابس العصرية. تسوق الآن للحصول على أفضل العروض!</subtitle>
+    <link href="https://liticiashoop.netlify.app"/>
+    <updated>2024-09-16T00:00:00Z</updated>
+    <id>https://liticiashop.netlify.app</id>
+
+    <entry>
+        <title>عنوان المقال</title>
+        <link href="https://robelili.netlify.app/order.html?productId=4"/>
+        <id>https://liticiashop.netlify.app/order.html?productId=4</id>
+        <updated>2024-09-16T00:00:00Z</updated>
+        <summary>ملخص المقال</summary>
+        <content>محتوى المقال الكامل</content>
+    </entry>
+
+    <!-- أضف المزيد من العناصر بنفس الشكل -->
+</feed>

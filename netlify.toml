@@ -1,0 +1,7 @@
+[build]
+  publish = "public"
+
+[[redirects]]
+  from = "/atom.xml"
+  to = "/atom.xml"
+  status = 200
